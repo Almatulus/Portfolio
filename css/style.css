@@ -1,0 +1,625 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+
+
+.wrapper{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main{
+    position: relative;
+    flex: 1 0 auto;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.container{
+    max-width: 1655px;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+
+body{
+    background-color: #090E16;
+    font-family: 'Roboto', sans-serif !important;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.title{
+    color: #fff;
+    font-weight: 800;
+}
+
+a{
+    color: rgba(123, 74, 226, 0.5);
+}
+
+.button{
+    font-weight: 600;
+    border: 1px solid rgba(123, 74, 226, 0.5);
+    padding: 10px 16px;
+    border-radius: 16px;
+    
+}
+
+.button:hover{
+    background: rgba(123, 74, 226, 0.5);
+    color: #fff;
+}
+
+
+.link + .link{
+    margin-left: 16px;
+}
+
+h2{
+    font-size: 48px!important;
+}
+
+.card{
+    border: 1px solid rgba(123, 74, 226, 0.5);
+    border-radius: 15px;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.card:hover{
+    background: rgba(123, 74, 226, 0.1);
+}
+
+.text-purple{
+    color: rgba(123, 74, 226, 1);
+}
+/*========================== HEADER =========================*/
+
+.header{
+    padding: 38px 0 0 0;
+}
+
+.header__inner{
+    display: flex;
+    justify-content: space-between;
+    background-color: #7B4AE20D;
+    border-radius: 16px;
+    padding: 11px 24px;
+    align-items: center;
+}
+
+.menu{
+    display: flex;
+}
+
+.menu__item{
+    cursor: pointer;
+}
+
+.menu__item + .menu__item{
+    margin-left: 16px;
+}
+
+.line{
+    display: flex;
+    align-items: center;
+}
+
+.label{
+    display: inline-block;
+    background: rgba(123, 74, 226, 0.1);
+    padding: 8px 13px;
+    border-radius: 16px;
+    color: rgba(123, 74, 226, 1);
+    font-size: 20px;
+    font-weight: 700;
+}
+/*========================== INTRO =========================*/
+
+.intro{
+    padding: 100px 0 0 0;
+}
+
+.intro__inner{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* .intro-first{
+    max-width: 411px;
+} */
+
+.intro__title{
+    font-size: 52px;
+    margin-top: 24px;
+}
+
+.intro__subtitle{
+    margin-top: 16px;
+}
+
+.intro__socials{
+    margin-top: 25px;
+}
+
+.intro__circle{
+    height: 510px;
+    width: 510px;
+    background: rgba(123, 74, 226, 0.2);
+    border-radius: 50%;
+    filter: blur(50px);
+}
+
+.intro__button{
+    display: inline-flex;
+    align-items: center;
+}
+
+.intro__button img{
+    margin-right: 8px;
+}
+
+/*========================== ABOUT =========================*/
+
+.about{
+    padding: 141px;
+}
+
+.about__inner{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.about__col{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.about__title{
+    margin-top: 24px;
+}
+
+.about__text{
+    margin-top: 24px;
+    line-height: 40px;
+}
+
+.about__smile{
+    opacity: 1;
+}
+
+/*========================== PROJECTS =========================*/
+
+/* .projects{
+    padding: 140px 0 0 0;
+} */
+.projects__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.projects__title{
+    margin-top: 24px;
+}
+
+.projects__content{
+    margin-top: 100px;
+}
+
+.projects__label-empty{
+    background: none!important;
+    border: 1px solid rgba(123, 74, 226, 0.5);
+    display: inline-flex;
+    align-items: center;
+}
+
+.projects__label-empty img{
+    margin-right: 16px;
+}
+
+.projects__content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin: 100px 0 0 0;
+    gap: 25px;
+}
+
+.projects__item{
+    padding: 30px;
+    flex: 0 0 calc(25% - 25px);
+    overflow: hidden;
+    margin-bottom: 48px;
+    display: flex;
+    flex-direction: column;
+}
+
+.projects__item-title{
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.projects__item-subtitle{
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 9px;
+    line-height: 16px;
+}
+
+.projects__tech{
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.projects__tech-item{
+    font-weight: 700;
+    text-align: center;
+    margin: 3px 0 22px 0;
+}
+
+.projects__tech-item + .projects__tech-item{
+    margin-left: 8px;
+}
+
+.projects__img{
+    margin-top: auto;
+    width: 100%;
+}
+
+.projects__img img{
+    width: 100%;
+    max-width: 100%;
+    border-radius: 20px;
+    flex-grow: 1;
+}
+
+/*========================== EXPERIENCE =========================*/
+
+.experience{
+    padding: 100px;
+    border-top: 1px solid rgba(123, 74, 226, 0.2);
+    border-bottom: 1px solid rgba(123, 74, 226, 0.2);
+}
+
+.experience__inner{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.experience__wrap{
+    max-width: 898px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+.experience__content{
+    display: flex;
+    /* flex-wrap: wrap; */
+    gap: 80px;
+}
+
+.experience-box, .experience__col{
+    padding: 42px;
+    flex: 1 1 45%;
+}
+
+.experience-box{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(123, 74, 226, 0.2);
+    border-radius: 16px;
+    align-items: center;
+}
+
+.experience__subtitle{
+    font-weight: 400;
+    line-height: 18px;
+}
+
+.experience__title{
+    font-size: 32px;
+}
+
+.experience__footer{
+    display: flex;
+    gap: 125px;
+    background: rgba(123, 74, 226, 0.1);
+    margin-top: 32px;
+    border-radius: 16px;
+}
+
+.experience__col{
+    
+}
+
+/*========================== SKILLS =========================*/
+
+.skills{
+    padding: 140px 0 0 0;
+}
+
+.skills__inner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.skills__title{
+    margin-top: 24px;
+}
+
+.skills__subtitle{
+    display: inline;
+}
+
+.skills__row{
+    margin-top: 60px;
+}
+
+
+.skills__list{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 40px;
+    justify-content: center;
+}
+
+.skills__item{
+    width: 64px;
+    height: 64px;
+}
+
+.skills__item img{
+    width: 100%;
+}
+
+.skills__item + .skills__item{
+    margin-left: 32px;
+}
+
+/*========================== CAREER =========================*/
+
+.career{
+    margin-top: 140px;
+    text-align: center;
+}
+
+.career__title{
+    margin-top: 24px;
+}
+
+.career__content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 64px;
+}
+
+.career__col{
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.career__col-title{
+    font-size: 32px;
+    color: #fff;
+    font-weight: 800;
+}
+
+.career__subtitle{
+    font-size: 24px;
+    font-weight: 400;
+    margin-top: 8px;
+}
+
+.career__item{
+    margin-top: 64px;
+    padding: 30px;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    max-width: 580px;
+    margin-bottom: 64px;
+}
+
+.career__card-title{
+    font-size: 20px;
+}
+
+.career__item-text{
+    margin-top: 13px;
+    line-height: 18px;
+}
+
+.career__item-block{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-weight: 700px;
+    color: rgba(123, 74, 226, 1);
+}
+
+/*========================== CONTACTS =========================*/
+
+.contacts{
+    padding: 136px;
+}
+
+.contacts__inner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contacts__title{
+    margin-top: 24px;
+}
+
+.contacts__content{
+    margin-top: 64px;
+    display: flex;
+    align-items: center;
+}
+
+.contacts__email{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 6px;
+    margin-left: 40px;
+}
+
+.contacts__email-icon{
+    width: 31.63px;
+    height: 31.63px;
+}
+
+.contacts__email-icon img{
+    width: 100%;
+}
+
+.contacts__copy{
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    margin-top: 16px;
+}
+
+.contacts__copy img{
+    width: 100%;
+}
+
+.contacts__up{
+    display: flex;
+    align-items: center;
+    margin-top: 64px;
+    color: rgba(123, 74, 226, 0.5);
+    cursor: pointer;
+
+}
+
+.contacts__up img{
+    margin-left: 8px;
+}
+
+/*========================== FOOTER =========================*/
+
+.footer{
+    padding: 23px 0 27px 0;
+    background: rgba(123, 74, 226, 0.1);
+}
+
+.footer__inner{
+    display: flex;
+    justify-content: center;
+}
