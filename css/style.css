@@ -331,22 +331,19 @@ h2{
 .intro__title {
     font-size: 52px;
     margin-top: 24px;
-    border-right: 4px solid rgba(255, 255, 255, 0.75);
-    white-space: nowrap; /* Предотвращает перенос строк */
-    overflow: hidden; /* Скрывает текст за границами */
-    -webkit-animation: type 5s steps(50, end);
-    animation: type 5s steps(50, end);
 }
 
-@keyframes type{
-    from { width: 0; }
-    to {width: 100%;}
+/* .type{
+    display: inline-flex;
+    width: 0;
+    word-break: break-all;
+    overflow: hidden;
+    animation: move 3s infinite linear alternate;
 }
 
-@-webkit-keyframes type{
-    from { width: 0; }
-    to {width: 100%;}
-}
+@keyframes move{
+    90%, 100% {width: 100%;}
+} */
 
 .intro__subtitle{
     margin-top: 16px;
@@ -753,6 +750,9 @@ h2{
 .contacts__email-icon{
     width: 31.63px;
     height: 31.63px;
+    cursor: pointer;
+    margin: 0 0 10px 0;
+    position: relative;
 }
 
 .contacts__email-icon img{
@@ -778,15 +778,20 @@ h2{
     padding: 5px; 
     position: absolute; 
     bottom: 100%; 
-    left: 50%; /* Центрировать подсказку по горизонтали */
-    transform: translateX(-50%); /* Сдвинуть влево на половину ширины */
-    z-index: 10; /* Убедитесь, что подсказка сверху */
-    transition: opacity 0.3s ease; /* Анимация для плавного появления */
+    left: 50%; 
+    transform: translateX(-50%); 
+    z-index: 10; 
+    transition: opacity 0.3s ease; 
 }
 
 .contacts__copy:hover .tooltip {
-    visibility: visible; /* Показать подсказку при наведении */
-    opacity: 1; /* Показать подсказку */
+    visibility: visible; 
+    opacity: 1; 
+}
+
+.contacts__email-icon:hover .tooltip {
+    visibility: visible; 
+    opacity: 1; 
 }
 
 .contacts__copy img{
