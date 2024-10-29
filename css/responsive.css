@@ -1,3 +1,234 @@
-@media (min-width: 769px) and (max-width: 992px) {
+@media (max-width: 1200px) {
+    .projects__item{
+        flex: 0 0 calc(50% - 20px);
+    }
+
+    .career__item{
+        margin: 20px 15px;
+    }
+}
+
+@media (max-width: 992px) {
+    .intro{
+        padding: 60px 0 20px 0;
+    }
+
+    .intro__inner{
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .intro__column:nth-child(1), .intro__column:nth-child(3){
+        margin-top: 80px;
+    }
     
+    .intro__column:nth-child(1){
+        order: 2;
+    }
+
+    .intro__column:nth-child(2){
+        order: 1;
+        margin: 0 auto;
+    }
+
+    .intro__column:nth-child(3){
+        order: 3;
+    }
+
+    .experience{
+        padding: 60px 0 60px 0;
+    }
+
+    .about{
+        padding: 90px 0 0 0;
+    }
+
+    .about__inner{
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .about__col:nth-child(1){
+        margin: 0 auto;
+    }
+
+    .about__col:nth-child(2){
+        margin-top: 30px;
+        width: 100%;
+    }
+
+    .projects{
+        padding: 90px 0 0 0;
+    }
+
+    .skills{
+        padding: 90px 0 0 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .header{
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+
+    .nav{
+        /* display: none; */
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(123, 74, 226, 1);
+        justify-content: center;
+        align-items: center;
+
+        margin-left: -100%;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+        pointer-events: none;
+    }
+
+    .nav.active-menu {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto; /* Делает меню кликабельным, когда оно открыто */
+    }
+
+    .nav.active-menu .menu__item {
+        /* opacity: 0; */
+        transform: translateY(20px);
+        animation: menuFadeIn 0.5s ease forwards;
+    }
+
+    .nav.active-menu .menu__item:nth-child(1) { animation-delay: 0.1s; }
+    .nav.active-menu .menu__item:nth-child(2) { animation-delay: 0.2s; }
+    .nav.active-menu .menu__item:nth-child(3) { animation-delay: 0.3s; }
+    .nav.active-menu .menu__item:nth-child(4) { animation-delay: 0.4s; }
+    .nav.active-menu .menu__item:nth-child(5) { animation-delay: 0.5s; }
+    .nav.active-menu .menu__item:nth-child(6) { animation-delay: 0.6s; }
+
+    .menu{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu__item{
+        font-size: 30px;
+        color: #fff;
+        margin: 10px 0;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .menu__item + .menu__item{
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .burger{
+        display: flex;
+    }
+
+    .intro{
+        padding: 150px 0 20px 0;
+    }
+    
+    .experience__content{
+        gap: 15px;
+    }
+
+    .experience__footer{
+        display: none;
+    }
+}
+
+@keyframes menuFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 510px) {
+    .intro__circle{
+        width: 262.12px;
+        height: 262.12px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    h2{
+        font-size: 30px!important;
+    }
+
+    .projects__header{
+        flex-direction: column;
+    }
+
+    .project__col{
+        width: 100%;
+    }
+
+    .projects__label-empty{
+        margin-top: 15px;
+    }
+    
+    .projects__content{
+        margin: 40px 0 0 0;
+        gap: 20px;
+    }
+
+    .projects__item{
+        flex: 0 0 calc(100% - 20px);
+        margin-bottom: 0;
+    }
+
+    .skills__row{
+        margin-top: 35px;
+    }
+
+    .skills__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px; 
+        justify-content: space-between;
+    }
+
+    .skills__item + .skills__item{
+        margin-left: 0;
+    }
+
+    .career{
+        padding: 100px 0 0 0;
+    }
+
+    .career__content{
+        margin-top: 50px;
+    }
+
+    .career__col{
+        margin-top: 20px;
+    }
+
+    .contacts {
+        padding: 90px 0 90px 0;
+    }
+
+    .contacts__content{
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .contacts__email{
+        margin-left: 0;
+        margin-top: 15px;
+    }
 }
