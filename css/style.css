@@ -134,7 +134,7 @@ a{
     border: 1px solid rgba(123, 74, 226, 0.5);
     padding: 10px 16px;
     border-radius: 16px;
-    
+    transition: .5s;
 }
 
 .button:hover{
@@ -313,8 +313,7 @@ h2{
 /*========================== INTRO =========================*/
 
 .intro{
-    padding: 100px 0 0 0;
-    height: 100vh;
+    padding: 100px 0 90px 0;
 }
 
 .intro__inner{
@@ -354,51 +353,74 @@ h2{
 }
 
 .intro__circle{
+    position: relative;
     height: 510px;
     width: 510px;
-    background: rgba(123, 74, 226, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
     border-radius: 50%;
-    filter: blur(50px);
-    box-shadow: 0 0 20px 10px rgba(255, 0, 0, 0.5), 
-                0 0 40px 20px rgba(0, 255, 0, 0.5),
-                0 0 60px 30px rgba(0, 0, 255, 0.5),
-                0 0 80px 40px rgba(255, 255, 0, 0.5);
+    box-shadow: 0 0 20px 10px rgba(82, 49, 151, 0.8),  /* темно-фиолетовый */
+            0 0 40px 20px rgba(42, 85, 42, 0.8),   /* темно-зеленый */
+            0 0 60px 30px rgba(35, 35, 82, 0.8);   
     animation: rainbowGlow 5s linear infinite;
 }
 
+
+/* .intro__circle::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(123, 74, 226, 0.2);
+    filter: blur(50px);
+    border-radius: 50%; 
+    z-index: 1; 
+} */
+
 @keyframes rainbowGlow {
     0% {
-        box-shadow: 0 0 20px 10px rgba(255, 0, 0, 0.5), 
-                    0 0 40px 20px rgba(0, 255, 0, 0.5),
-                    0 0 60px 30px rgba(0, 0, 255, 0.5),
-                    0 0 80px 40px rgba(255, 255, 0, 0.5);
+        box-shadow: 0 0 20px 10px rgba(123, 74, 226, 0.5), 
+                    0 0 40px 20px rgba(64, 128, 64, 0.5),
+                    0 0 60px 30px rgba(54, 54, 128, 0.5),
+                    0 0 80px 40px rgba(180, 180, 54, 0.5);
     }
     25% {
-        box-shadow: 0 0 20px 10px rgba(255, 0, 255, 0.5), 
-                    0 0 40px 20px rgba(0, 255, 255, 0.5),
-                    0 0 60px 30px rgba(255, 255, 0, 0.5),
-                    0 0 80px 40px rgba(255, 0, 0, 0.5);
+        box-shadow: 0 0 20px 10px rgba(180, 54, 180, 0.5), 
+                    0 0 40px 20px rgba(54, 180, 180, 0.5),
+                    0 0 60px 30px rgba(180, 180, 54, 0.5),
+                    0 0 80px 40px rgba(128, 54, 54, 0.5);
     }
     50% {
-        box-shadow: 0 0 20px 10px rgba(0, 255, 0, 0.5), 
-                    0 0 40px 20px rgba(255, 0, 255, 0.5),
-                    0 0 60px 30px rgba(0, 0, 255, 0.5),
-                    0 0 80px 40px rgba(255, 255, 0, 0.5);
+        box-shadow: 0 0 20px 10px rgba(64, 128, 64, 0.5), 
+                    0 0 40px 20px rgba(180, 54, 180, 0.5),
+                    0 0 60px 30px rgba(54, 54, 128, 0.5),
+                    0 0 80px 40px rgba(180, 180, 54, 0.5);
     }
     75% {
-        box-shadow: 0 0 20px 10px rgba(0, 0, 255, 0.5), 
-                    0 0 40px 20px rgba(255, 255, 0, 0.5),
-                    0 0 60px 30px rgba(0, 255, 0, 0.5),
-                    0 0 80px 40px rgba(255, 0, 255, 0.5);
+        box-shadow: 0 0 20px 10px rgba(54, 54, 128, 0.5), 
+                    0 0 40px 20px rgba(180, 180, 54, 0.5),
+                    0 0 60px 30px rgba(64, 128, 64, 0.5),
+                    0 0 80px 40px rgba(180, 54, 180, 0.5);
     }
     100% {
-        box-shadow: 0 0 20px 10px rgba(255, 0, 0, 0.5), 
-                    0 0 40px 20px rgba(0, 255, 0, 0.5),
-                    0 0 60px 30px rgba(0, 0, 255, 0.5),
-                    0 0 80px 40px rgba(255, 255, 0, 0.5);
+        box-shadow: 0 0 20px 10px rgba(123, 74, 226, 0.5), 
+                    0 0 40px 20px rgba(64, 128, 64, 0.5),
+                    0 0 60px 30px rgba(54, 54, 128, 0.5),
+                    0 0 80px 40px rgba(180, 180, 54, 0.5);
     }
 }
 
+.intro__circle img {
+    position: relative;
+    z-index: 2; 
+    filter: none; 
+    object-fit: cover;
+    width: 100%;
+}
 .intro__button{
     display: inline-flex;
     align-items: center;
@@ -507,7 +529,7 @@ h2{
 }
 
 .projects__item-subtitle{
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
     margin-top: 9px;
     line-height: 16px;
@@ -532,6 +554,7 @@ h2{
 .projects__img{
     margin-top: auto;
     width: 100%;
+    height: 319px;
 }
 
 .projects__img img{
@@ -688,13 +711,13 @@ h2{
 }
 
 .career__item{
-    margin-top: 64px;
+    margin: 45px 0 0 0;
     padding: 30px;
     text-align: start;
     display: flex;
     flex-direction: column;
     max-width: 580px;
-    margin-bottom: 64px;
+    width: 100%;
 }
 
 .career__card-title{
@@ -764,8 +787,8 @@ h2{
     width: 32px;
     height: 32px;
     margin-top: 16px;
-    position: relative; /* Для позиционирования подсказки */
-    display: inline-flex; /* Чтобы элементы были на одной линии */
+    position: relative; 
+    display: inline-flex; 
     align-items: center;
 }
 

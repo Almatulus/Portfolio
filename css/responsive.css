@@ -156,6 +156,21 @@
     }
 }
 
+@media (max-width: 720px) {
+    .projects__item{
+        flex: 0 0 calc(100% - 20px);
+        margin-bottom: 0;
+    }
+
+    .projects__img{
+        height: auto;
+    }
+
+    .projects__content{
+        justify-content: center;
+    }
+}
+
 @media (max-width: 510px) {
     .intro__circle{
         width: 262.12px;
@@ -184,11 +199,6 @@
     .projects__content{
         margin: 40px 0 0 0;
         gap: 20px;
-    }
-
-    .projects__item{
-        flex: 0 0 calc(100% - 20px);
-        margin-bottom: 0;
     }
 
     .skills__row{
