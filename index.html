@@ -13,17 +13,17 @@
         <header class="header">
             <div class="container">
                 <div class="header__inner">
-                    <a href="#" class="logo">
+                    <a data-target="home" class="logo">
                         <img src="/img/Logo.svg" alt="Logo">
                     </a>
                     <nav class="nav">
                         <ul class="menu">
-                            <li class="menu__item">Главная</li>
-                            <li class="menu__item">Обо мне</li>
-                            <li class="menu__item">Портфолио</li>
-                            <li class="menu__item">Мои навыки</li>
-                            <li class="menu__item">Карьера</li>
-                            <li class="menu__item">Контакты</li>
+                            <li class="menu__item"><a data-target="home">Главная</a></li>
+                            <li class="menu__item"><a data-target="about">Обо мне</a></li>
+                            <li class="menu__item"><a data-target="portfolio">Портфолио</a></li>
+                            <li class="menu__item"><a data-target="skills">Мои навыки</a></li>
+                            <li class="menu__item"><a data-target="career">Карьера</a></li>
+                            <li class="menu__item"><a data-target="contacts">Контакты</a></li>
                         </ul>
                     </nav>
                     <div class="burger">
@@ -33,7 +33,7 @@
             </div>
         </header>
         <main class="main">
-            <section class="intro">
+            <section class="intro" id="home">
                 <div class="container">
                     <div class="intro__inner">
                         <div class="intro__column intro-first">
@@ -47,10 +47,10 @@
                                 Front-end разработчик
                             </h3>
                             <div class="intro__socials line">
-                                <a href="#" class="intro__link link">
+                                <a target="_blank" href="https://www.linkedin.com/in/almat-kaipzhanov-9ab90026a/" class="intro__link link">
                                     <img src="/img/icons/linkedin.svg" alt="Linked In">
                                 </a>
-                                <a href="#" class="intro__link link">
+                                <a target="_blank" href="https://github.com/Almatulus" class="intro__link link">
                                     <img src="/img/icons/github.svg" alt="GitHub">
                                 </a>
                             </div>
@@ -61,7 +61,7 @@
                             </div>
                         </div>
                         <div class="intro__column">
-                            <a href="#" class="intro__button button">
+                            <a target="_blank" href="https://wa.me/77059064321?text=Здравствуйте,%20я%20хотел%20бы%20узнать%20подробнее%20о%20ваших%20услугах" class="intro__button button">
                                 <img src="/img/icons/WhatsappLogo.svg" alt="WhatsApp" class="whatsapp-icon"> Давайте поговорим!
                             </a>
                         </div>
@@ -118,7 +118,7 @@
                     </div>
                 </div>
             </section>
-            <section class="about">
+            <section class="about" id="about">
                 <div class="container">
                     <div class="about__inner">
                         <div class="about__col">
@@ -146,7 +146,7 @@
                     </div>
                 </div>
             </section>
-            <section class="projects">
+            <section class="projects" id="portfolio">
                 <div class="container">
                     <div class="projects__inner">
                         <div class="projects__header">
@@ -284,7 +284,7 @@
                     </div>
                 </div>
             </section>
-            <section class="skills">
+            <section class="skills" id="skills">
                 <div class="container">
                     <div class="skills__inner">
                         <p class="skills__label label">
@@ -337,7 +337,7 @@
                     </div>
                 </div>
             </section>
-            <section class="career">
+            <section class="career" id="career">
                 <div class="container">
                     <div class="career__inner">
                         <p class="career__label label">
@@ -416,7 +416,7 @@
                     </div>
                 </div>
             </section>
-            <section class="contacts">
+            <section class="contacts" id="contacts">
                 <div class="container">
                     <div class="contacts__inner">
                         <p class="contacts__label label">
@@ -430,11 +430,11 @@
                                 <img src="/img/icons/WhatsappLogo.svg" alt="WhatsApp" class="whatsapp-icon"> Давайте поговорим!
                             </a>
                             <div class="contacts__email">
-                                <div class="contacts__email-icon">
+                                <a target="_blank" href="https://t.me/Almatulus" class="contacts__email-icon">
                                     <img src="/img/icons/PaperPlaneTilt.svg" alt="Telegram">
                                     <span class="tooltip">Перейти в телеграм</span>
-                                </div>
-                                <a href="#" class="contacts__text">
+                                </a>
+                                <a target="_blank" href="mailto:a.kaipzhanov@gmail.com?subject=По%20поводу%20сотрудничества&body=Здравствуйте,%20я%20хотел%20бы%20узнать%20подробнее%20о%20ваших%20услугах" class="contacts__text">
                                     <span>E-mail:</span><br>
                                     a.kaipzhanov@gmail.com
                                 </a>
@@ -456,10 +456,10 @@
             <div class="container">
                 <div class="footer__inner">
                     <div class="footer__content line">
-                        <a href="#" class="footer__link link">
+                        <a target="_blank" href="https://www.linkedin.com/in/almat-kaipzhanov-9ab90026a/" class="footer__link link">
                             <img src="/img/icons/linkedin.svg" alt="Linked In">
                         </a>
-                        <a href="#" class="footer__link link">
+                        <a target="_blank" href="https://github.com/Almatulus" class="footer__link link">
                             <img src="/img/icons/github.svg" alt="GitHub">
                         </a>
                     </div>
@@ -470,5 +470,6 @@
     <script src="/js/menu.js"></script>
     <script src="/js/copy.js"></script>
     <script src="/js/scroll.js"></script>
+    <script src="/js/header.js"></script>
 </body>
 </html>
